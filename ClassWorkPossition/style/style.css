@@ -3,6 +3,7 @@ html {
 }
 body {
     font-family: 'Roboto', sans-serif;
+    padding-top: 100px;
     
 }
 *::after, 
@@ -23,7 +24,14 @@ img {
    margin: 0 auto;
    max-width: 960px;
 }
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1;
+}
 .navigation {
+    width: 100%;
     box-shadow: 0 10px 20px rgba(171, 112, 224, 0.59), 0 6px 6px rgba(0,0,0,0.23);
 }
 .navigation__items{
@@ -38,7 +46,8 @@ img {
     display: block;
     color:purple;
     font-size: 20px;
-    font-weight: bold;text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
     margin: 0 20px;
     text-transform: uppercase;
     background: gray;
@@ -49,9 +58,78 @@ img {
     position: absolute;
     /* display: none; 1 */
     visibility: hidden; 2
+    transform: translateX(-50%);
 }
-.nav__item:hover .navigation__subitems {
+ .nav__item:hover > .navigation__subitems {
     /* display: block;1 */
-    /* 2 work animation */
-    visibility: visible;  /* sdds
+    
+    visibility: visible;  /* 2 work animation */
+} 
+.nav__submenu {
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: normal;
+    min-height: 55px;
+    min-width: 195px;
+}
+ .navigation__subitems__second,
+ .navigation__subitems__one,
+ .navigation__subitems__third{
+    /* position: absolute; */
+    visibility: hidden;
+    transform: translateX(100%);
+    left: 0;
+}
+.nav__submenu__second:hover .navigation__subitems__second,.nav__submenu__one:hover .navigation__subitems__one,
+.nav__submenu__third:hover .navigation__subitems__third {
+    visibility: visible;
+}
+
+/* SECTION */
+main{
+    width: 100%;
+    height:auto;
+}
+.first__section{
+    width: 100%;
+    height: 500px;
+    background: url("../img/thumbs-up.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.first__section__content{
+    position: absolute;
+    color: white;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.first__section__title{
+    font-size: 50px;
+    
+}
+.irst__section__description{
+    font-size: 25px;
+}
+ /* modal */
+.modal__overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 100;
+    }
+.modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% -50%);
+    text-align: center;
+    color: : white;
+    font-size: 50px;
+    
 }
