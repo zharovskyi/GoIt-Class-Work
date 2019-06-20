@@ -3,7 +3,7 @@ html {
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background-color:green;
+    
 }
 *::after, 
 *::before {
@@ -14,8 +14,44 @@ img {
     max-width: 100%;
     height: auto;
 }
-.clearfix::after {
+/* .clearfix::after {
     display: table;
     content: "";
     clear: both;
+} */
+.container {
+   margin: 0 auto;
+   max-width: 960px;
+}
+.navigation {
+    box-shadow: 0 10px 20px rgba(171, 112, 224, 0.59), 0 6px 6px rgba(0,0,0,0.23);
+}
+.navigation__items{
+    font-size: 0;
+}
+.nav__item{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+.nav__link{
+    display: block;
+    color:purple;
+    font-size: 20px;
+    font-weight: bold;text-decoration: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+    background: gray;
+    text-align: center;
+}
+/* Submenu */
+.navigation__subitems{
+    position: absolute;
+    /* display: none; 1 */
+    visibility: hidden; 2
+}
+.nav__item:hover .navigation__subitems {
+    /* display: block;1 */
+    /* 2 work animation */
+    visibility: visible;  /* sdds
 }
