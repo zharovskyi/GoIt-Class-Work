@@ -64,11 +64,36 @@ HEADER
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    transition: 2s ease-in-out;
 
 }
 .team__item:not(:nth-last-of-type(-n+2)){
     margin-bottom: 60px;
 }
+.team__item:hover {
+    /* transform: rotate(90deg) scale(1.3) skewY(30deg); */
+    animation: team__item 12s infinite;
+}
+@keyframes team__item{
+    0%{
+        transform: none;
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: none;
+    }
+    25%{
+        transform: rotate(-360deg);
+    }
+    25%{
+        transform: rotate(none);
+    }
+}
+
+
+
 .team__name {
     margin: 0;
     font-size: 20px;
