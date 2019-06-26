@@ -10,6 +10,38 @@ img{
 }
 .first__section {
     background-image: url('../img/thumbs-up.png');
-    height: 500px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: #ffffff;
+    padding: 100px 0 0 0 ;
+}
+.first__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.first__section__text{
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* SECTION 2 */
+.title {
+    text-align: center;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.book__item {
+    float: left;
+    width: 300px;
+    list-style: none;
+    margin-bottom: 40px;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
 }

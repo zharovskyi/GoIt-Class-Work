@@ -1,0 +1,84 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+  
+}
+*::after, 
+*::before {
+    box-sizing: inherit;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+max-width: 960px;
+}
+
+/* Dectcop FIRST */
+
+
+/*
+ header
+ */
+.nav {
+    display: flex;
+    flex-flow: row wrap;
+    
+    justify-content: space-between;
+}
+.nav__link{
+    font-size: 32px;
+}
+/* 
+team
+*/
+.team__list {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.team__item {
+    flex-basis: 200px;
+   
+}
+
+
+@media screen and (max-width: 767px) /*work 768  and less*/
+{
+    .nav__link{
+        font-size: 24px;
+    }
+.nav {
+    flex-direction: column;
+}
+
+/* team */
+.team__list{
+    max-width: 500px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+}
+}
+@media screen and (max-width:100px) {
+    .nav__link {
+        font-size: 20px;
+    }
+
+/* team */
+.team__list{
+    /* max-width: 1200px; */
+   
+}
+
+
+
+
+
+}

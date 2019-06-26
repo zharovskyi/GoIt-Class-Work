@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+  
+}
+*::after, 
+*::before {
+    box-sizing: inherit;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* MOBILE FIRST */
+
+
+/*
+ header
+ */
+.nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    height: 300px;
+    justify-content: space-between;
+}
+/* 
+team
+*/
+.team__list {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.team__item {
+    flex-basis: 200px;
+    margin:0 20px ;
+}
+
+
+@media screen and (min-width: 768px) /*work 768  and more*/
+{
+.nav {
+    flex-direction: row;
+}
+}
+/* team */
+.team__list{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:1100px) {
+    .nav__link {
+        font-size: 20px;
+    }
+
+/* team */
+.team__list{
+    max-width: 1200px;
+   
+}
+
+
+
+
+
+}
